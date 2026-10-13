@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expense Sheets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Expense Sheets</h1>
+  <p class="lead">A private household expense tracker built on Google Sheets.</p>
+
+  <p>
+    Expense Sheets is a small web app that two members of one household use to record expenses in
+    their own Google Sheets spreadsheet and to ask questions about their spending. It is not a
+    public service, and only the household's two Google accounts can use it.
+  </p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Add expenses:</strong> a phone-friendly form that adds a line item (item, amount,
+      date, category, payment type) to the right monthly tab of the household's spreadsheet.</li>
+    <li><strong>Ask questions:</strong> a chat where the household can ask questions about their
+      expenses, answered by Claude, an AI assistant made by Anthropic.</li>
+  </ul>
+
+  <h2>How it uses Google data</h2>
+  <p>
+    The app runs on Google Apps Script with the permissions of the person using it. It reads and
+    writes the household's own spreadsheet, uses the signed-in Google account's email address to
+    check that the person is one of the two allowed users, and requests a short-lived identity token
+    for the app's own Google Cloud service account so it can authenticate to Anthropic's API.
+    See the <a href="privacy.html">privacy policy</a> for details.
+  </p>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a> · Contact: <a href="mailto:ememes12@gmail.com">ememes12@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
